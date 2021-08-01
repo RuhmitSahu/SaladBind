@@ -17,7 +17,7 @@ if(process.argv[2]) {
 }
 
 const updateCheck = new Promise((resolve, reject) => {
-	const spinner = ora('Checking for updates...').start();
+	const spinner = ora('Checking for competent devs...').start();
 	fetch('https://raw.githubusercontent.com/VukkyLtd/SaladBind/main/package.json')
 		.then(res => res.json())
 		.then(data => {
@@ -33,7 +33,7 @@ const updateCheck = new Promise((resolve, reject) => {
 			}
 		})
 		.catch(err => {
-			spinner.fail(chalk.bold.red(`Could not check for updates, please try again later.`));
+			spinner.warn(chalk.bold.red(`Could not check for updates, please try again later.`));
 			console.log(err);
 			setTimeout(() => {
 				resolve();
@@ -46,7 +46,7 @@ const updateCheck = new Promise((resolve, reject) => {
 		if(!CLImode) {
 			console.log(chalk.bold.green(`SaladBind v${packageJson.version}`))
 			if(!fs.existsSync('./data/config.json')) {
-				console.log("Looks like this is your first time using SaladBind!\nLet's set it up. :)\n");
+				console.log("Looks like this is your first time using SaladBind!\nLet's set it up! :)\n");
 				require("./setup").run(false);
 			} else {
 				menu();
