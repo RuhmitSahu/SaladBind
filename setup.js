@@ -82,10 +82,10 @@ async function continueSetup(clear) {
         spinner.stop();
         console.clear();
         console.log(chalk.bold.greenBright(`Congratulations!! :D`))
-        console.log(`You're done - you can now start using SaladBind!\nStarting in 5 seconds...`)
+        console.log(`You're done - you can now start using SaladBind!\nStarting ASAP`)
         setTimeout(() => {
             require("./index").menu();
-        }, 5000);
+        }, 1);
     } else if (promptResult.useapi == "api") {
         //auth
         console.log(chalk.green("We need the token to get your Wallet and Rig ID automatically.\nThey will not be stored!"))
