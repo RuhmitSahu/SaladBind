@@ -429,4 +429,3 @@ async function startMiner(minerData, algo, pool, region, advancedCommands) {
 module.exports = { 
 	run
 };
-//E -Plerion
