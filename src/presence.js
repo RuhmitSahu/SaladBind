@@ -68,3 +68,4 @@ module.exports = {
 	mine: function(miner, algo, pool) { presence(`Mining with ${miner}`, `Using ${algo} on ${pool}`, Date.now(), "icon", `v${pjson.version}`, "mining", "Mining") },
 	state: client
 }
+// heh lol
